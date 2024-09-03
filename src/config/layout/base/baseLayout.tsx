@@ -1,4 +1,5 @@
 import { Header, Body, Menu } from "./components"
+import { Outlet } from "react-router-dom"
 
 const BaseLayout = () => {
   return (
@@ -8,7 +9,9 @@ const BaseLayout = () => {
       <div className="flex flex-1">
       <Menu />
 
-       <Body />
+      <Body>
+        <Outlet />
+      </Body>
       </div>
     </div>
   )

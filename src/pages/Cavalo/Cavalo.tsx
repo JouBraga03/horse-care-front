@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Typography from '@mui/material/Typography';
-
 import Lista from '../../common/components/List';
 import { useCavaloContext } from '../../common/context/Cavalo';
 import FormularioCavalo from './components/FormularioCavalo';
@@ -20,19 +18,9 @@ const Cavalo: React.FC<Props> = () => {
   };
 
   return (
-    <Container>
-      <Typography component="h1" variant="h3">
-        Listagem de Caválos
-      </Typography>
-
-      <FormularioCavalo />
-
-      <Lista
-        colunas={colunasTabelaCavalo}
-        itens={cavalos}
-        onDelete={handleDelete}
-      />
-    </Container>
+   <>
+    <h2> Caiu do cavalo </h2>
+   </>
   );
 };
 
