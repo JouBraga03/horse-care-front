@@ -1,12 +1,9 @@
 import React from 'react';
 
-import Lista from '../../common/components/List';
 import { useCavaloContext } from '../../common/context/Cavalo';
 import FormularioCavalo from './components/FormularioCavalo';
 
-import { colunasTabelaCavalo } from './components/utils/columns';
-
-import Container from '../../common/components/Container';
+import { List } from '@modules/horse'
 
 interface Props {}
 
@@ -14,12 +11,14 @@ const Cavalo: React.FC<Props> = () => {
   const { cavalos, deleteCavalos } = useCavaloContext();
 
   const handleDelete = (indexItem: number) => {
-    deleteCavalos(indexItem);
+    deleteCavalos(indexItem); 
   };
 
   return (
    <>
-    <h2> Caiu do cavalo </h2>
+    <h2 className='font-bold text-2xl text-gray-300'> Cavalos </h2>
+
+    <List />
    </>
   );
 };
