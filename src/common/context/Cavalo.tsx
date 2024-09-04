@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
-import { ICavaloContext, ICavalo } from '../interfaces/Cavalo';
+import { ICavalo, ICavaloContext } from '../interfaces/Cavalo';
 
 export const CavaloContext = createContext<ICavaloContext>(
   {} as ICavaloContext

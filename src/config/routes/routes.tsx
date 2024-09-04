@@ -18,21 +18,21 @@ import Home from "../../pages/Home";
       {
         path: Routes.HORSE,
         async lazy() {
-          let component = await import('../../pages/Cavalo');
+          const component = await import('../../pages/Cavalo');
           return { Component: component.default };
         },
       },
       {
         path: Routes.CLIENT,
         async lazy() {
-          let component = await import('../../pages/Cliente');
+          const component = await import('../../pages/Cliente');
           return { Component: component.default };
         },
       },
       {
         path:Routes.MATERIALS,
         async lazy() {
-          let component = await import('../../pages/Materiais');
+          const component = await import('../../pages/Materiais');
           return { Component: component.default };
         },
       }
