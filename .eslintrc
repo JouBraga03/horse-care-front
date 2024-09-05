@@ -16,7 +16,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "import", "simple-import-sort"],
+  "plugins": ["react", "@typescript-eslint", "import", "simple-import-sort"],
   "ignorePatterns": ["build", "coverage", "package-lock.json"],
   "rules": {
     "import/first": "error",
@@ -25,7 +25,8 @@
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": 0
   },
   "overrides": [
     {
@@ -34,5 +35,32 @@
         "@typescript-eslint/no-var-requires": "off"
       }
     }
-  ]
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use,
+      "pragma": false,
+      "fragment": "Fragment",
+      "version": "detect", 
+      "defaultVersion": "", 
+      "flowVersion": "0.53"
+    },
+    "propWrapperFunctions": [
+        "forbidExtraProps",
+        {"property": "freeze", "object": "Object"},
+        {"property": "myFavoriteWrapper"},
+        {"property": "forbidExtraProps", "exact": true}
+    ],
+    "formComponents": [
+    
+      "CustomForm",
+      {"name": "SimpleForm", "formAttribute": "endpoint"},
+      {"name": "Form", "formAttribute": ["registerEndpoint", "loginEndpoint"]}, // allows specifying multiple properties if necessary
+    ],
+    "linkComponents": [
+      "Hyperlink",
+      {"name": "MyLink", "linkAttribute": "to"},
+      {"name": "Link", "linkAttribute": ["to", "href"]}
+    ]
+  }
 }

@@ -1,4 +1,4 @@
 export * from './Cavalo'
 export * from './Cliente'
-export * from './Materiais'
 export * from './Home'
+export * from './Materiais'

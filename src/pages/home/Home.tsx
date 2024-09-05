@@ -1,12 +1,12 @@
 import clsx from 'clsx'
-import HorseCare from '../../assets/horse_care.png'
 
+import HorseCare from '../../assets/horse_care.png'
 import style from './style.module.css'
 
 const Home = () => {
   return (
     <>
-      <div className='w-full h-full flex items-center justify-center flex-col'>
+      <div className="w-full h-full flex items-center justify-center flex-col">
         <picture>
           <img src={HorseCare} alt="horse care logo" />
         </picture>

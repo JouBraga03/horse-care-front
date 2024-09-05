@@ -1,8 +1,8 @@
-import { BaseLayout } from "./config"
+import { BaseLayout } from './config'
 
 function App() {
   return (
-    <>  
+    <>
       <div className="app">
         <BaseLayout />
       </div>
