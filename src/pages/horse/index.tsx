@@ -1,1 +1,1 @@
-export { default as Horse } from './horse'
+export { default } from './horse'
