@@ -1,4 +1,5 @@
 import Home from '@pages/home'
+import Login from '@pages/login'
 import { createBrowserRouter } from 'react-router-dom'
 
 import App from '../../App'
@@ -35,6 +36,10 @@ const routes = createBrowserRouter([
         }
       }
     ]
+  },
+  {
+    path: Routes.LOGIN,
+    element: <Login />
   }
 ])
 
