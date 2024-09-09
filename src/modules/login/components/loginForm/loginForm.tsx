@@ -33,8 +33,6 @@ const LoginForm = () => {
       refPassword.current.type = 'text'
       return
     }
-
-    // POSICIONAR O ICONDE DENTRO DO INPUT
   }
 
   return (
@@ -62,7 +60,7 @@ const LoginForm = () => {
               Senha:
             </label>
 
-            <div>
+            <div className="relative">
               <input
                 ref={refPassword}
                 type="password"
@@ -70,9 +68,14 @@ const LoginForm = () => {
                 id="password"
                 onChange={(e) => setPassword(e.target.value)}
               />
+              <Eye
+                aria-label="Ver senha"
+                size="20"
+                color="white"
+                className="absolute top-3 right-4 cursor-pointer font-bold"
+                onClick={handleShowPassWord}
+              />
             </div>
-
-            <Eye onClick={handleShowPassWord} />
           </div>
 
           <button
